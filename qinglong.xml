@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qinglong</Name>
+  <Repository>whyour/qinglong</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://10.0.0.250:8081</WebUI>
+  <TemplateURL/>
+  <Icon>https://bkimg.cdn.bcebos.com/pic/b21c8701a18b87d6277fc0b399593f381f30e9245747</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644326493</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>5700</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/qinglong/config</HostDir>
+      <ContainerDir>/ql/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/qinglong/log</HostDir>
+      <ContainerDir>/ql/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/qinglong/db</HostDir>
+      <ContainerDir>/ql/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/qinglong/repo</HostDir>
+      <ContainerDir>/ql/repo</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/qinglong/raw</HostDir>
+      <ContainerDir>/ql/raw</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/qinglong/scripts</HostDir>
+      <ContainerDir>/ql/scripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/qinglong/jbot</HostDir>
+      <ContainerDir>/ql/jbot</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="webui" Target="5700" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 5700" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="config" Target="/ql/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/qinglong/config</Config>
+  <Config Name="log" Target="/ql/log" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/qinglong/log</Config>
+  <Config Name="db" Target="/ql/db" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/db" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/qinglong/db</Config>
+  <Config Name="repo" Target="/ql/repo" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/repo" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/qinglong/repo</Config>
+  <Config Name="raw" Target="/ql/raw" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/raw" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/qinglong/raw</Config>
+  <Config Name="scripts" Target="/ql/scripts" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/scripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/qinglong/scripts</Config>
+  <Config Name="jbot" Target="/ql/jbot" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /ql/jbot" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/qinglong/jbot</Config>
+</Container>

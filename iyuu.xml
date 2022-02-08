@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>iyuu</Name>
+  <Repository>iyuucn/iyuuplus</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://10.0.0.250:8087/</WebUI>
+  <TemplateURL/>
+  <Icon>http://10.0.0.250:8087/images/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644324568</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8087</HostPort>
+        <ContainerPort>8787</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/iyuu</HostDir>
+      <ContainerDir>/IYUU/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="webui" Target="8787" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8787" Type="Port" Display="always" Required="false" Mask="false">8087</Config>
+  <Config Name="db" Target="/IYUU/db" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /IYUU/db" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/iyuu</Config>
+</Container>

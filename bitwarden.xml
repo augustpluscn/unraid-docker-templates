@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bitwarden</Name>
+  <Repository>vaultwarden/server:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>https://bitcs.frp.payouli.com:8443/</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.icon-icons.com/icons2/2108/PNG/512/bitwarden_icon_130977.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644325073</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/bitwarden/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="webui" Target="80" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 80" Type="Port" Display="always" Required="false" Mask="false">8082</Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/bitwarden/data</Config>
+</Container>

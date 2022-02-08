@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>gitea</Name>
+  <Repository>gitea/gitea:1.15.9</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://10.0.0.250:8099</WebUI>
+  <TemplateURL/>
+  <Icon>http://10.0.0.250:8099/assets/img/logo.svg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644325526</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8099</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/gitea/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/timezone</HostDir>
+      <ContainerDir>/etc/timezone</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtim</HostDir>
+      <ContainerDir>/etc/localtim</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>USER_UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>USER_GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="webui" Target="3000" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 3000" Type="Port" Display="always" Required="false" Mask="false">8099</Config>
+  <Config Name="USER_UID" Target="USER_UID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: USER_UID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="USER_GID" Target="USER_GID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: USER_GID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/gitea/data</Config>
+  <Config Name="timezone" Target="/etc/timezone" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /etc/timezone" Type="Path" Display="always" Required="false" Mask="false">/etc/timezone</Config>
+  <Config Name="localtim" Target="/etc/localtim" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /etc/localtim" Type="Path" Display="always" Required="false" Mask="false">/etc/localtim</Config>
+</Container>
