@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1644280579</DateInstalled>
+  <DateInstalled>1644413876</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, &#xB5;TP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.</Description>
@@ -38,17 +38,17 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/share/download/transmission/</HostDir>
+      <HostDir>/mnt/user/download/transmission</HostDir>
       <ContainerDir>/downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/share/download/transmission/watch/</HostDir>
+      <HostDir>/mnt/user/download/transmission/watch</HostDir>
       <ContainerDir>/watch</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/DockerAPP/transmission</HostDir>
+      <HostDir>/mnt/user/appdata/transmission</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -69,14 +69,26 @@
       <Name>TRANSMISSION_WEB_HOME</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>august</Value>
+      <Name>USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>7WzTjQZGuv3V</Value>
+      <Name>PASS</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="9091" Default="9091" Mode="tcp" Description="Container Port: 9091" Type="Port" Display="always" Required="true" Mask="false">59091</Config>
   <Config Name="Host Port 2" Target="51413" Default="51413" Mode="tcp" Description="Container Port: 51413" Type="Port" Display="always" Required="true" Mask="false">51413</Config>
-  <Config Name="Host Path 2" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/share/download/transmission/</Config>
-  <Config Name="Host Path 3" Target="/watch" Default="" Mode="rw" Description="Container Path: /watch" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/share/download/transmission/watch/</Config>
+  <Config Name="Host Path 2" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/download/transmission</Config>
+  <Config Name="Host Path 3" Target="/watch" Default="" Mode="rw" Description="Container Path: /watch" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/download/transmission/watch</Config>
   <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="webui" Target="TRANSMISSION_WEB_HOME" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: TRANSMISSION_WEB_HOME" Type="Variable" Display="always" Required="false" Mask="false">/transmission-web-control/</Config>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/DockerAPP/transmission" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/DockerAPP/transmission</Config>
+  <Config Name="USER" Target="USER" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: USER" Type="Variable" Display="always" Required="false" Mask="false">august</Config>
+  <Config Name="PASS" Target="PASS" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PASS" Type="Variable" Display="always" Required="false" Mask="false">7WzTjQZGuv3V</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/DockerAPP/transmission" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/transmission</Config>
 </Container>

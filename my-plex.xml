@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1644333862</DateInstalled>
+  <DateInstalled>1644418783</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>plex&#x5A92;&#x4F53;&#x670D;&#x52A1;&#x5668;</Description>
@@ -33,13 +33,18 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/docker/plex/tem</HostDir>
+      <HostDir>/mnt/user/appdata/docker/plex/temp</HostDir>
       <ContainerDir>/transcode</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/download/transmission</HostDir>
       <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/aliyun</HostDir>
+      <ContainerDir>/aliyun</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
@@ -50,7 +55,7 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>1</Value>
+      <Value>claim-xaPgfYP74Ju7z3gCQThM</Value>
       <Name>PLEX_CLAIM</Name>
       <Mode/>
     </Variable>
@@ -71,11 +76,12 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="PLEX_CLAIM" Target="PLEX_CLAIM" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PLEX_CLAIM" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="PLEX_CLAIM" Target="PLEX_CLAIM" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PLEX_CLAIM" Type="Variable" Display="always" Required="false" Mask="false">claim-xaPgfYP74Ju7z3gCQThM</Config>
   <Config Name="webui" Target="32400" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 32400" Type="Port" Display="always" Required="false" Mask="false">32400</Config>
-  <Config Name="cache" Target="/transcode" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /transcode" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/plex/tem</Config>
+  <Config Name="cache" Target="/transcode" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /transcode" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/docker/plex/temp</Config>
   <Config Name="media" Target="/media" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /media" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/download/transmission</Config>
   <Config Name="xk" Target="" Default="" Mode="" Description="&#x663E;&#x5361;" Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
+  <Config Name="aliyun" Target="/aliyun" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /aliyun" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/aliyun</Config>
   <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/plex" Mode="rw" Description="Plex library location. *This can grow very large, 50gb+ is likely for a large collection.*" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/docker/plex/config</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
